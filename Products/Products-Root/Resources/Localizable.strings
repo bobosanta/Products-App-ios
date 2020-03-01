@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Products
+
+  Created by bogdan razvan on 01/03/2020.
+  Copyright © 2020 Archlime. All rights reserved.
+*/
+
+"general-error" = "An error has occured";
+"email" = "Email";
+"password" = "Password";
+"invalid-credentials.title" = "Invalid Credentials";
+"invalid-credentials.description" = "Please input valid credentials";
+"user-not-found" = "User was not found";
+"ok" = "Ok";
