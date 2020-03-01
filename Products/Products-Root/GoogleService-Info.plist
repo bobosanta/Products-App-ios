@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>129534890561-bsnol9pq08o9ncq6enn9r8an9mr3sudc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.129534890561-bsnol9pq08o9ncq6enn9r8an9mr3sudc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA-pdwhE2XRcZMVyNlVkTuVjgFmXHCCCrQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>129534890561</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Archlime.Products</string>
+	<key>PROJECT_ID</key>
+	<string>shopy-21569</string>
+	<key>STORAGE_BUCKET</key>
+	<string>shopy-21569.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:129534890561:ios:0025b2e2be8fc652b22cc0</string>
+	<key>DATABASE_URL</key>
+	<string>https://shopy-21569.firebaseio.com</string>
+</dict>
+</plist>
