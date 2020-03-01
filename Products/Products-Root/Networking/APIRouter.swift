@@ -10,22 +10,21 @@ import Alamofire
 
 enum APIRouter: APIConfiguration {
 
-    //TODO: change this
-    private static let baseUrl = ""
+    private static let baseUrl = "https://jsonplaceholder.typicode.com/"
 
-    case login
+    case getPosts
 
     // MARK: - API Configuration
 
     var method: HTTPMethod {
         switch self {
-        case .login: return .post
+        case .getPosts: return .get
         }
     }
 
     var path: String {
         switch self {
-        case .login: return "login"
+        case .getPosts: return "posts"
         }
     }
 

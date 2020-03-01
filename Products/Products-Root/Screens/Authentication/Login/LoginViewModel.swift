@@ -40,7 +40,7 @@ class LoginViewModel: BaseViewModel, EventTransmitter {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             guard let self = self else { return }
             self.isRequestInProgress.value = false
-            if let error = error {
+            if error != nil {
                 self.error.value = GeneralError(title: "invalid-credentials.title".localized, descr: "user-not-found".localized)
             } else {
                 self.event.value = .didLogin
@@ -48,6 +48,14 @@ class LoginViewModel: BaseViewModel, EventTransmitter {
 
         }
 
+    }
+
+    //TODO: remove
+    func getPosts() {
+        repository.getPosts { [weak self] response in
+            guard let self = self, let responseData = response.data else { return }
+            print(responseData?.count)
+        }
     }
 
 }
