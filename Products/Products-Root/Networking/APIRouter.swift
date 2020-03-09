@@ -10,21 +10,21 @@ import Alamofire
 
 enum APIRouter: APIConfiguration {
 
-    private static let baseUrl = "https://jsonplaceholder.typicode.com/"
+    private static let baseUrl = "https://shopy-web-api.herokuapp.com/api/v1/"
 
-    case getPosts
+    case login(request: LoginRequest)
 
     // MARK: - API Configuration
 
     var method: HTTPMethod {
         switch self {
-        case .getPosts: return .get
+        case .login: return .post
         }
     }
 
     var path: String {
         switch self {
-        case .getPosts: return "posts"
+        case .login: return "sessions"
         }
     }
 
@@ -36,6 +36,7 @@ enum APIRouter: APIConfiguration {
 
     var parameters: Parameters? {
         switch self {
+        case .login(let request): return request.params
         default: return nil
         }
     }

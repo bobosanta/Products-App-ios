@@ -49,8 +49,6 @@ class LoginViewController: BaseViewController, AlertPresenter, LoadingViewPresen
             guard let self = self, let value = value else { return }
             switch value {
             case .didLogin:
-                //TODO: remove next line
-                self.viewModel.getPosts()
                 self.delegate?.loginViewControllerDidLogin()
             }
         }.dispose(in: bag)

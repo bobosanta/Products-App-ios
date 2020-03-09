@@ -28,10 +28,11 @@
 		ABC4D225240C19E800BF0E90 /* APIConfirguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC4D224240C19E800BF0E90 /* APIConfirguration.swift */; };
 		ABC4D227240C19EE00BF0E90 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC4D226240C19EE00BF0E90 /* APIRouter.swift */; };
 		ABC4D229240C1BC200BF0E90 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC4D228240C1BC200BF0E90 /* APIError.swift */; };
-		ABC4D22B240C1EA800BF0E90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABC4D22A240C1EA700BF0E90 /* GoogleService-Info.plist */; };
 		ABC4D22D240C251600BF0E90 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC4D22C240C251600BF0E90 /* AlertPresenter.swift */; };
 		ABC4D22F240C26B600BF0E90 /* LoadingViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC4D22E240C26B600BF0E90 /* LoadingViewPresenter.swift */; };
-		ABC4D231240C2ECC00BF0E90 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC4D230240C2ECC00BF0E90 /* Post.swift */; };
+		ABF2CBDD241638E700267960 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2CBDC241638E700267960 /* LoginRequest.swift */; };
+		ABF2CBDF2416397500267960 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2CBDE2416397500267960 /* EncodableExtensions.swift */; };
+		ABF2CBE124163A9100267960 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2CBE024163A9100267960 /* Member.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,10 +60,11 @@
 		ABC4D224240C19E800BF0E90 /* APIConfirguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfirguration.swift; sourceTree = "<group>"; };
 		ABC4D226240C19EE00BF0E90 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		ABC4D228240C1BC200BF0E90 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		ABC4D22A240C1EA700BF0E90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABC4D22C240C251600BF0E90 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		ABC4D22E240C26B600BF0E90 /* LoadingViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewPresenter.swift; sourceTree = "<group>"; };
-		ABC4D230240C2ECC00BF0E90 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		ABF2CBDC241638E700267960 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		ABF2CBDE2416397500267960 /* EncodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
+		ABF2CBE024163A9100267960 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		F16EF1F1E32B5F81B297C8B1 /* Pods-Products.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Products.debug.xcconfig"; path = "Target Support Files/Pods-Products/Pods-Products.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +107,6 @@
 				ABC4D1FB240C0D2600BF0E90 /* Screens */,
 				ABC4D1FC240C0D2A00BF0E90 /* Resources */,
 				ABC4D1FD240C0D3200BF0E90 /* Utils */,
-				ABC4D22A240C1EA700BF0E90 /* GoogleService-Info.plist */,
 			);
 			path = "Products-Root";
 			sourceTree = "<group>";
@@ -122,7 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				ABC4D213240C13CD00BF0E90 /* Error */,
-				ABC4D230240C2ECC00BF0E90 /* Post.swift */,
+				ABF2CBDC241638E700267960 /* LoginRequest.swift */,
+				ABF2CBE024163A9100267960 /* Member.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,6 +230,7 @@
 			children = (
 				ABC4D21C240C14DB00BF0E90 /* StringExtensions.swift */,
 				ABC4D21E240C16DA00BF0E90 /* UILabelExtension.swift */,
+				ABF2CBDE2416397500267960 /* EncodableExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,7 +314,6 @@
 			files = (
 				1DBEAB06240C078100D3FD34 /* LaunchScreen.storyboard in Resources */,
 				ABC4D217240C145000BF0E90 /* Localizable.strings in Resources */,
-				ABC4D22B240C1EA800BF0E90 /* GoogleService-Info.plist in Resources */,
 				1DBEAB03240C078100D3FD34 /* Assets.xcassets in Resources */,
 				ABC4D207240C0F9600BF0E90 /* LoginViewController.xib in Resources */,
 			);
@@ -386,12 +388,14 @@
 			files = (
 				ABC4D209240C0FA000BF0E90 /* LoginViewController.swift in Sources */,
 				ABC4D227240C19EE00BF0E90 /* APIRouter.swift in Sources */,
+				ABF2CBDD241638E700267960 /* LoginRequest.swift in Sources */,
 				ABC4D203240C0EC100BF0E90 /* AppCoordinator.swift in Sources */,
 				ABC4D21D240C14DB00BF0E90 /* StringExtensions.swift in Sources */,
 				ABC4D201240C0E7B00BF0E90 /* Coordinator.swift in Sources */,
 				ABC4D225240C19E800BF0E90 /* APIConfirguration.swift in Sources */,
 				ABC4D20B240C0FA700BF0E90 /* LoginViewModel.swift in Sources */,
 				1DBEAAFA240C077900D3FD34 /* AppDelegate.swift in Sources */,
+				ABF2CBDF2416397500267960 /* EncodableExtensions.swift in Sources */,
 				ABC4D212240C125A00BF0E90 /* BaseViewModel.swift in Sources */,
 				ABC4D223240C19DC00BF0E90 /* APIResponse.swift in Sources */,
 				ABC4D210240C125300BF0E90 /* BaseViewController.swift in Sources */,
@@ -400,8 +404,8 @@
 				ABC4D21F240C16DA00BF0E90 /* UILabelExtension.swift in Sources */,
 				ABC4D229240C1BC200BF0E90 /* APIError.swift in Sources */,
 				ABC4D215240C13E700BF0E90 /* GeneralError.swift in Sources */,
-				ABC4D231240C2ECC00BF0E90 /* Post.swift in Sources */,
 				ABC4D22F240C26B600BF0E90 /* LoadingViewPresenter.swift in Sources */,
+				ABF2CBE124163A9100267960 /* Member.swift in Sources */,
 				ABC4D221240C19D600BF0E90 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
