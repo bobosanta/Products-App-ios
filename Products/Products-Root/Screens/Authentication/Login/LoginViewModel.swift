@@ -7,7 +7,6 @@
 //
 
 import Bond
-import Firebase
 
 class LoginViewModel: BaseViewModel, EventTransmitter {
 
@@ -37,25 +36,17 @@ class LoginViewModel: BaseViewModel, EventTransmitter {
                 return
         }
         isRequestInProgress.value = true
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+        let request = LoginRequest(email: email, password: password)
+        repository.login(request: request) { [weak self] response in
             guard let self = self else { return }
             self.isRequestInProgress.value = false
-            if error != nil {
-                self.error.value = GeneralError(title: "invalid-credentials.title".localized, descr: "user-not-found".localized)
-            } else {
-                self.event.value = .didLogin
+            guard response.success else {
+                self.error.value = GeneralError(title: "invalid-credentials.title".localized, descr: "invalid-credentials.description".localized)
+                return
             }
-
+            self.event.value = .didLogin
         }
 
-    }
-
-    //TODO: remove
-    func getPosts() {
-        repository.getPosts { [weak self] response in
-            guard let self = self, let responseData = response.data else { return }
-            print(responseData?.count)
-        }
     }
 
 }

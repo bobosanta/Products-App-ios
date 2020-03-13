@@ -9,13 +9,13 @@
 import Foundation
 
 protocol LoginRepository: APIClient {
-    func getPosts(completion: @escaping (APIResponse<[Post]?>) -> Void)
+    func login(request: LoginRequest, completion: @escaping (APIResponse<Member?>) -> Void)
 }
 
 class LoginRepositoryImpl: LoginRepository {
 
-    func getPosts(completion: @escaping (APIResponse<[Post]?>) -> Void) {
-        performRequest(route: APIRouter.getPosts, completion: completion)
+    func login(request: LoginRequest, completion: @escaping (APIResponse<Member?>) -> Void) {
+        performRequest(route: APIRouter.login(request: request), completion: completion)
     }
 
 }

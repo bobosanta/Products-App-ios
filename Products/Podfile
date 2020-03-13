@@ -9,9 +9,6 @@ target 'Products' do
   pod 'SwiftLint'
   pod 'Bond'
   pod 'Alamofire', '~> 5.0.0-rc.2'
-  pod 'Firebase'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Database'
   pod 'NVActivityIndicatorView'
 
 end
