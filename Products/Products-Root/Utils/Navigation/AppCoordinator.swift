@@ -23,16 +23,31 @@ class AppCoordinator: Coordinator {
     func start() {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-        showLogin()
+        pushSplash()
     }
 
     // MARK: - Private
+    private func pushSplash() {
+        let repository = SplashRepositoryImpl()
+        let viewModel = SplashViewModel(repository: repository)
+        let viewController = SplashViewController(viewModel: viewModel, delegate: self)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
     private func showLogin() {
         let repository = LoginRepositoryImpl()
         let viewModel = LoginViewModel(repository: repository)
         let viewController = LoginViewController(viewModel: viewModel, delegate: self)
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    private func showRegister() {
+       let repository = RegisterRepositoryImpl()
+       let viewModel = RegisterViewModel(repository: repository)
+       let viewController = RegisterViewController(viewModel: viewModel, delegate: self)
+       navigationController.pushViewController(viewController, animated: true)
+    }
+    
 
     private func showTabBar() {
         //TODO: implement
@@ -44,8 +59,30 @@ class AppCoordinator: Coordinator {
 extension AppCoordinator: LoginViewControllerDelegate {
 
     func loginViewControllerDidLogin() {
-//        showTabBar()
         showLogin()
     }
 
+}
+
+// MARK: - SplashViewControllerDelegate
+extension AppCoordinator: SplashViewControllerDelegate {
+    
+    func splashViewControlledDidPressSignIn() {
+        showLogin()
+    }
+    
+    func splashViewControllerDidPressRegister() {
+        showRegister()
+    }
+    
+}
+
+// MARK: - Register
+
+extension AppCoordinator: RegisterViewControllerDelegate {
+    
+    func testBtnPressed() {
+        print("Btn pressed")
+    }
+    
 }
