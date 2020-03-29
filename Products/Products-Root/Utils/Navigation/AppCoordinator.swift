@@ -81,8 +81,5 @@ extension AppCoordinator: SplashViewControllerDelegate {
 
 extension AppCoordinator: RegisterViewControllerDelegate {
     
-    func testBtnPressed() {
-        print("Btn pressed")
-    }
     
 }
