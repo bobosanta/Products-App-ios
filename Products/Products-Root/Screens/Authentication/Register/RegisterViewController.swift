@@ -9,20 +9,23 @@
 import UIKit
 
 protocol RegisterViewControllerDelegate: class {
-    func testBtnPressed()
+    
 }
 
 class RegisterViewController: BaseViewController {
     
+    // MARK: - Properties
     weak var delegate: RegisterViewControllerDelegate?
     private var viewModel: RegisterViewModel!
     
+    // MARK: Lifecycle
     convenience init(viewModel: RegisterViewModel, delegate: RegisterViewControllerDelegate) {
         self.init()
         self.delegate = delegate
         self.viewModel = viewModel
     }
     
+    // MARK: IBActions
     @IBAction func buttonInRegisterPressed(_ sender: Any) {
         delegate?.testBtnPressed()
     }

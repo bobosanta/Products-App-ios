@@ -15,10 +15,19 @@ protocol SplashViewControllerDelegate: class {
 
 
 class SplashViewController: BaseViewController {
-    private var viewModel: SplashViewModel!
+    
+    // MARK: Properties
     weak var delegate: SplashViewControllerDelegate?
+    private var viewModel: SplashViewModel!
     
+    // MARK: Lifecycle
+    convenience init(viewModel:SplashViewModel, delegate: SplashViewControllerDelegate) {
+        self.init()
+        self.viewModel = viewModel
+        self.delegate = delegate
+    }
     
+    // MARK: IBActions
     @IBAction func registerButtonPressed(_ sender: Any) {
         delegate?.splashViewControllerDidPressRegister()
     }
@@ -26,12 +35,5 @@ class SplashViewController: BaseViewController {
     @IBAction func signinButtonPressed(_ sender: Any) {
         delegate?.splashViewControlledDidPressSignIn()
     }
-    
-    convenience init(viewModel:SplashViewModel, delegate: SplashViewControllerDelegate) {
-        self.init()
-        self.viewModel = viewModel
-        self.delegate = delegate
-    }
-    
 }
 

@@ -10,9 +10,11 @@ import Bond
 
 class RegisterViewModel: BaseViewModel {
    
+    // MARK: - Properties
     var error = Observable<GeneralError?>(nil)
     private var repository: RegisterRepository
     
+    // MARK: Lifecycle
     init(repository: RegisterRepository) {
         self.repository = repository
     }
