@@ -23,13 +23,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="peu-KK-Jq6">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-background" translatesAutoresizingMaskIntoConstraints="NO" id="MJ9-hk-Tcf">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWX-Vu-J3K">
-                            <rect key="frame" x="52" y="668" width="310" height="50"/>
+                            <rect key="frame" x="52" y="746" width="310" height="50"/>
                             <color key="backgroundColor" red="0.90980392156862744" green="0.6470588235294118" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="rPr-pC-8fI"/>
@@ -49,7 +49,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MBU-D0-fpY">
-                            <rect key="frame" x="52" y="482" width="310" height="146"/>
+                            <rect key="frame" x="52" y="560" width="310" height="146"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="vwr-c7-id4">
                                     <rect key="frame" x="0.0" y="0.0" width="310" height="61.5"/>
@@ -135,7 +135,7 @@
                             </constraints>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgX-s5-BVG">
-                            <rect key="frame" x="52" y="758" width="135" height="34"/>
+                            <rect key="frame" x="52" y="836" width="135" height="34"/>
                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                             <state key="normal" title="Forgot password ?">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -154,20 +154,19 @@
                         <constraint firstItem="TWX-Vu-J3K" firstAttribute="top" secondItem="MBU-D0-fpY" secondAttribute="bottom" constant="40" id="PbW-o2-BJi"/>
                         <constraint firstItem="JK8-hr-cpA" firstAttribute="leading" secondItem="TWX-Vu-J3K" secondAttribute="leading" id="Wya-rE-UxL"/>
                         <constraint firstAttribute="bottom" secondItem="TWX-Vu-J3K" secondAttribute="bottom" constant="100" id="ZrR-m4-Kt0"/>
-                        <constraint firstAttribute="bottom" secondItem="MJ9-hk-Tcf" secondAttribute="bottom" id="cAR-ym-n36"/>
-                        <constraint firstItem="MJ9-hk-Tcf" firstAttribute="top" secondItem="peu-KK-Jq6" secondAttribute="top" id="cBT-vw-EV4"/>
+                        <constraint firstAttribute="bottom" secondItem="MJ9-hk-Tcf" secondAttribute="bottom" id="aCK-0D-fwf"/>
+                        <constraint firstItem="MJ9-hk-Tcf" firstAttribute="top" secondItem="peu-KK-Jq6" secondAttribute="top" id="bbD-EP-xFe"/>
                         <constraint firstItem="IgX-s5-BVG" firstAttribute="leading" secondItem="TWX-Vu-J3K" secondAttribute="leading" id="nGD-WK-rbk"/>
                         <constraint firstItem="MJ9-hk-Tcf" firstAttribute="leading" secondItem="peu-KK-Jq6" secondAttribute="leading" id="vKU-6m-o24"/>
                         <constraint firstItem="Awq-ol-aRr" firstAttribute="trailing" secondItem="TWX-Vu-J3K" secondAttribute="trailing" id="wEZ-Rk-gFc"/>
-                        <constraint firstAttribute="bottom" secondItem="MJ9-hk-Tcf" secondAttribute="bottom" id="zDQ-3Y-0ta"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="peu-KK-Jq6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="PDw-Fp-crz"/>
+                <constraint firstItem="peu-KK-Jq6" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="8JX-Ui-Iap"/>
                 <constraint firstItem="peu-KK-Jq6" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="RmV-aF-XKE"/>
-                <constraint firstItem="peu-KK-Jq6" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="cHY-oB-aLg"/>
+                <constraint firstItem="peu-KK-Jq6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="W4G-96-i3d"/>
                 <constraint firstItem="peu-KK-Jq6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hHg-tN-l8s"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
