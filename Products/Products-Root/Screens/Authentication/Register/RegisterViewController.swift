@@ -27,7 +27,7 @@ class RegisterViewController: BaseViewController {
     
     // MARK: IBActions
     @IBAction func buttonInRegisterPressed(_ sender: Any) {
-        delegate?.testBtnPressed()
+    
     }
     
 }
