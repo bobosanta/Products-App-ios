@@ -13,7 +13,6 @@ protocol SplashViewControllerDelegate: class {
     func splashViewControllerDidPressRegister()
 }
 
-
 class SplashViewController: BaseViewController {
     
     // MARK: Properties
@@ -36,4 +35,3 @@ class SplashViewController: BaseViewController {
         delegate?.splashViewControlledDidPressSignIn()
     }
 }
-

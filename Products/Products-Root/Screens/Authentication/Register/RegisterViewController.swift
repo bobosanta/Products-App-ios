@@ -28,10 +28,10 @@ class RegisterViewController: BaseViewController {
     @IBOutlet weak var signinButton: UIButton!
     @IBOutlet weak var showPasswordButton: UIButton!
     
-    
     // MARK: - Properties
     weak var delegate: RegisterViewControllerDelegate?
     private var viewModel: RegisterViewModel!
+    var isPasswordHidden = true
     
     // MARK: Lifecycle
     convenience init(viewModel: RegisterViewModel, delegate: RegisterViewControllerDelegate) {
@@ -45,6 +45,15 @@ class RegisterViewController: BaseViewController {
     }
     
     @IBAction func showPasswordButtonTapped(_ sender: Any) {
+        if isPasswordHidden {
+            passwordTextField.isSecureTextEntry.toggle()
+            showPasswordButton.setTitle("hide".localized, for: .normal)
+            isPasswordHidden = false
+        } else {
+            passwordTextField.isSecureTextEntry.toggle()
+            showPasswordButton.setTitle("show".localized, for: .normal)
+            isPasswordHidden = true
+        }
     }
     
     @IBAction func addProfileImageButtonTapped(_ sender: Any) {
@@ -52,7 +61,5 @@ class RegisterViewController: BaseViewController {
     
     @IBAction func signinButtonTapped(_ sender: Any) {
     }
-    
-    
-    
+
 }

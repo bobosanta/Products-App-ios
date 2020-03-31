@@ -23,7 +23,7 @@ class LoginViewController: BaseViewController, AlertPresenter, LoadingViewPresen
     // MARK: - Properties
     private var viewModel: LoginViewModel!
     private weak var delegate: LoginViewControllerDelegate?
-    var passwordHidden = true
+    var isPasswordHidden = true
 
     // MARK: - Lifecycle
     convenience init(viewModel: LoginViewModel, delegate: LoginViewControllerDelegate) {
@@ -47,14 +47,14 @@ class LoginViewController: BaseViewController, AlertPresenter, LoadingViewPresen
     }
     
     @IBAction func showPasswordButtonPressed(_ sender: Any) {
-        if (passwordHidden == true) {
-            showPasswordButton.setTitle("Hide", for: .normal)
+        if isPasswordHidden {
+            showPasswordButton.setTitle("hide".localized, for: .normal)
             passwordTextField.isSecureTextEntry.toggle()
-            passwordHidden = false
+            isPasswordHidden = false
         } else {
-            showPasswordButton.setTitle("Show", for: .normal)
+            showPasswordButton.setTitle("show".localized, for: .normal)
             passwordTextField.isSecureTextEntry.toggle()
-            passwordHidden = true
+            isPasswordHidden = true
         }
     }
 

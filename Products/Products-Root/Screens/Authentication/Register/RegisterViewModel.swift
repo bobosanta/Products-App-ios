@@ -19,4 +19,3 @@ class RegisterViewModel: BaseViewModel {
         self.repository = repository
     }
 }
-
