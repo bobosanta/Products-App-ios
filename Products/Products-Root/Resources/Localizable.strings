@@ -13,3 +13,5 @@
 "invalid-credentials.description" = "Please input valid credentials";
 "user-not-found" = "User was not found";
 "ok" = "Ok";
+"hide" = "Hide";
+"show" = "Show";

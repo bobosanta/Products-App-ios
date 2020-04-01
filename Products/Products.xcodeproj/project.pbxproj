@@ -227,8 +227,8 @@
 		ABC4D204240C0F8000BF0E90 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				1D5B868E241BF53E00DC02BE /* Register */,
 				1DCD6CAE2417F554002935E2 /* Splash */,
+				1D5B868E241BF53E00DC02BE /* Register */,
 				ABC4D205240C0F8900BF0E90 /* Login */,
 			);
 			path = Authentication;
@@ -593,7 +593,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7C3R87KYJ;
+				DEVELOPMENT_TEAM = L6Q7QEYASW;
 				INFOPLIST_FILE = "Products-Root/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -615,7 +615,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V7C3R87KYJ;
+				DEVELOPMENT_TEAM = L6Q7QEYASW;
 				INFOPLIST_FILE = "Products-Root/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

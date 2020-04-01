@@ -28,7 +28,7 @@ extension APIClient {
             .responseJSON(completionHandler: { response in
                 print(response)
             })
-            .responseDecodable (decoder: JSONDecoder()) { (response: AFDataResponse<T>) in
+            .responseDecodable (decoder: JSONDecoder()) {(response: AFDataResponse<T>) in
                 self.parseResponse(route: route, response: response, completion: completion)
         }
     }

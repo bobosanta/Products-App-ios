@@ -48,7 +48,6 @@ class AppCoordinator: Coordinator {
        navigationController.pushViewController(viewController, animated: true)
     }
     
-
     private func showTabBar() {
         //TODO: implement
     }
@@ -80,6 +79,5 @@ extension AppCoordinator: SplashViewControllerDelegate {
 // MARK: - Register
 
 extension AppCoordinator: RegisterViewControllerDelegate {
-    
     
 }

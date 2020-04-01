@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         let mainNavigationController = UINavigationController()
+        mainNavigationController.setNavigationBarHidden(true, animated: false)
         coordinator = AppCoordinator(navigationController: mainNavigationController, window: window!)
         coordinator?.start()
         return true

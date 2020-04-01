@@ -17,10 +17,13 @@ class LoginViewController: BaseViewController, AlertPresenter, LoadingViewPresen
     // MARK: - IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-
+    @IBOutlet weak var forgotPasswordButton: UIButton!
+    @IBOutlet weak var showPasswordButton: UIButton!
+    
     // MARK: - Properties
     private var viewModel: LoginViewModel!
     private weak var delegate: LoginViewControllerDelegate?
+    var isPasswordHidden = true
 
     // MARK: - Lifecycle
     convenience init(viewModel: LoginViewModel, delegate: LoginViewControllerDelegate) {
@@ -38,6 +41,21 @@ class LoginViewController: BaseViewController, AlertPresenter, LoadingViewPresen
     // MARK: - IBActions
     @IBAction func loginButtonPressed(_ sender: Any) {
         viewModel.login()
+    }
+    
+    @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func showPasswordButtonPressed(_ sender: Any) {
+        if isPasswordHidden {
+            showPasswordButton.setTitle("hide".localized, for: .normal)
+            passwordTextField.isSecureTextEntry.toggle()
+            isPasswordHidden = false
+        } else {
+            showPasswordButton.setTitle("show".localized, for: .normal)
+            passwordTextField.isSecureTextEntry.toggle()
+            isPasswordHidden = true
+        }
     }
 
     // MARK: - Private
