@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RegisterViewControllerDelegate: class {
-    
+    func registerViewControllerDidPressSignIn()
 }
 
 class RegisterViewController: BaseViewController {
@@ -60,6 +60,7 @@ class RegisterViewController: BaseViewController {
     }
     
     @IBAction func signinButtonTapped(_ sender: Any) {
+        delegate?.registerViewControllerDidPressSignIn()
     }
 
 }

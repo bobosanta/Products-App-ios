@@ -76,8 +76,12 @@ extension AppCoordinator: SplashViewControllerDelegate {
     
 }
 
-// MARK: - Register
+// MARK: - RegisterViewControllerDelegate
 
 extension AppCoordinator: RegisterViewControllerDelegate {
+    
+    func registerViewControllerDidPressSignIn() {
+        showLogin()
+    }
     
 }
