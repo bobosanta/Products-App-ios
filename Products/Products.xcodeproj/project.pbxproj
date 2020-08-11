@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0C9A2124E3108D00190069 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A2024E3108D00190069 /* TabBarViewController.swift */; };
+		1D0C9A2324E3112900190069 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A2224E3112900190069 /* AuthenticationCoordinator.swift */; };
+		1D0C9A2524E316EC00190069 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A2424E316EC00190069 /* TabBarCoordinator.swift */; };
+		1D0C9A2724E3206600190069 /* ProductsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A2624E3206600190069 /* ProductsCoordinator.swift */; };
+		1D0C9A2924E3207400190069 /* WishlistCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A2824E3207300190069 /* WishlistCoordinator.swift */; };
+		1D0C9A2B24E3207E00190069 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A2A24E3207E00190069 /* ProfileCoordinator.swift */; };
 		1D5B8690241BF7AC00DC02BE /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5B868F241BF7AC00DC02BE /* RegisterViewController.xib */; };
 		1D5B8692241BF7C500DC02BE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B8691241BF7C500DC02BE /* RegisterViewController.swift */; };
 		1D5B8694241BF7D600DC02BE /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B8693241BF7D600DC02BE /* RegisterViewModel.swift */; };
@@ -45,6 +51,12 @@
 
 /* Begin PBXFileReference section */
 		071F7A3D7C54D346CEC1C801 /* Pods_Products.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Products.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D0C9A2024E3108D00190069 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		1D0C9A2224E3112900190069 /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
+		1D0C9A2424E316EC00190069 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		1D0C9A2624E3206600190069 /* ProductsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCoordinator.swift; sourceTree = "<group>"; };
+		1D0C9A2824E3207300190069 /* WishlistCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistCoordinator.swift; sourceTree = "<group>"; };
+		1D0C9A2A24E3207E00190069 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		1D5B868F241BF7AC00DC02BE /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		1D5B8691241BF7C500DC02BE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1D5B8693241BF7D600DC02BE /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -96,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D0C9A1F24E3106900190069 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1D0C9A2024E3108D00190069 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		1D5B868E241BF53E00DC02BE /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +240,11 @@
 			children = (
 				ABC4D200240C0E7B00BF0E90 /* Coordinator.swift */,
 				ABC4D202240C0EC100BF0E90 /* AppCoordinator.swift */,
+				1D0C9A2224E3112900190069 /* AuthenticationCoordinator.swift */,
+				1D0C9A2424E316EC00190069 /* TabBarCoordinator.swift */,
+				1D0C9A2624E3206600190069 /* ProductsCoordinator.swift */,
+				1D0C9A2824E3207300190069 /* WishlistCoordinator.swift */,
+				1D0C9A2A24E3207E00190069 /* ProfileCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -227,6 +252,7 @@
 		ABC4D204240C0F8000BF0E90 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				1D0C9A1F24E3106900190069 /* TabBar */,
 				1DCD6CAE2417F554002935E2 /* Splash */,
 				1D5B868E241BF53E00DC02BE /* Register */,
 				ABC4D205240C0F8900BF0E90 /* Login */,
@@ -432,19 +458,25 @@
 				ABC4D209240C0FA000BF0E90 /* LoginViewController.swift in Sources */,
 				ABC4D227240C19EE00BF0E90 /* APIRouter.swift in Sources */,
 				ABF2CBDD241638E700267960 /* LoginRequest.swift in Sources */,
+				1D0C9A2124E3108D00190069 /* TabBarViewController.swift in Sources */,
 				ABC4D203240C0EC100BF0E90 /* AppCoordinator.swift in Sources */,
 				1DCD6CB42417F5D2002935E2 /* SplashViewModel.swift in Sources */,
 				ABC4D21D240C14DB00BF0E90 /* StringExtensions.swift in Sources */,
+				1D0C9A2524E316EC00190069 /* TabBarCoordinator.swift in Sources */,
 				ABC4D201240C0E7B00BF0E90 /* Coordinator.swift in Sources */,
 				ABC4D225240C19E800BF0E90 /* APIConfirguration.swift in Sources */,
 				ABC4D20B240C0FA700BF0E90 /* LoginViewModel.swift in Sources */,
 				1DBEAAFA240C077900D3FD34 /* AppDelegate.swift in Sources */,
 				ABF2CBDF2416397500267960 /* EncodableExtensions.swift in Sources */,
 				ABC4D212240C125A00BF0E90 /* BaseViewModel.swift in Sources */,
+				1D0C9A2924E3207400190069 /* WishlistCoordinator.swift in Sources */,
+				1D0C9A2724E3206600190069 /* ProductsCoordinator.swift in Sources */,
+				1D0C9A2324E3112900190069 /* AuthenticationCoordinator.swift in Sources */,
 				ABC4D223240C19DC00BF0E90 /* APIResponse.swift in Sources */,
 				ABC4D210240C125300BF0E90 /* BaseViewController.swift in Sources */,
 				1D5B8696241BF7E400DC02BE /* RegisterRepository.swift in Sources */,
 				ABC4D22D240C251600BF0E90 /* AlertPresenter.swift in Sources */,
+				1D0C9A2B24E3207E00190069 /* ProfileCoordinator.swift in Sources */,
 				1D5B8692241BF7C500DC02BE /* RegisterViewController.swift in Sources */,
 				ABC4D20D240C0FBC00BF0E90 /* LoginRepository.swift in Sources */,
 				ABC4D21F240C16DA00BF0E90 /* UILabelExtension.swift in Sources */,
