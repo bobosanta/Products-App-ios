@@ -9,17 +9,16 @@
 import UIKit
 
 protocol TabBarViewControllerDelegate: class {
-    
+
 }
 
 class TabBarViewController: UITabBarController {
-    
+
     private weak var tabBarViewControllerDelegate: TabBarViewControllerDelegate?
-    
-   convenience init(delegate: TabBarViewControllerDelegate) {
+
+    convenience init(delegate: TabBarViewControllerDelegate) {
         self.init()
         tabBarViewControllerDelegate = delegate
-        
     }
-    
+
 }

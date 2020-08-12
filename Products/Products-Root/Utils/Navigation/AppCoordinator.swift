@@ -14,26 +14,27 @@ class AppCoordinator: Coordinator {
     private let window: UIWindow
     private var authenticationCoordinator: AuthenticationCoordinator?
     private var tabBarCoordinator: TabBarCoordinator?
+    private var profileCoordinator: ProfileCoordinator?
 
     // MARK: - Initializer
     init(navigationController: UINavigationController, window: UIWindow) {
         self.navigationController = navigationController
         self.window = window
     }
-    
+
     // MARK: - Navigation
     func start() {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-       showAuthentication()
+        showAuthentication()
     }
-    
+
     private func showTabBar() {
-         tabBarCoordinator = TabBarCoordinator(navigationController: navigationController, delegate: self)
-         tabBarCoordinator?.start()
+        tabBarCoordinator = TabBarCoordinator(navigationController: navigationController, delegate: self)
+        tabBarCoordinator?.start()
         authenticationCoordinator = nil
     }
-    
+
     private func showAuthentication() {
         authenticationCoordinator = AuthenticationCoordinator(navigationController: navigationController, delegate: self)
         authenticationCoordinator?.start()
@@ -42,16 +43,21 @@ class AppCoordinator: Coordinator {
 
 }
 
+// MARK: AuthenticationCoordinatorDelegate
 extension AppCoordinator: AuthenticationCoordinatorDelegate {
-    
+
     func authenticationCoordinatorDidLogin() {
         showTabBar()
     }
-    
+
 }
 
+// MARK: TabBarCoordinatorDelegate
 extension AppCoordinator: TabBarCoordinatorDelegate {
-    
-    
-    
+
+    func profileCoordinatorDidLogout() {
+        showAuthentication()
+        print("AppCoordinator shows Authentication")
+    }
+
 }
