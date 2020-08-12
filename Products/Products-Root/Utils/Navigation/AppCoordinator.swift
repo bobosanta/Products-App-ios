@@ -12,6 +12,9 @@ class AppCoordinator: Coordinator {
 
     private let navigationController: UINavigationController
     private let window: UIWindow
+    private var authenticationCoordinator: AuthenticationCoordinator?
+    private var tabBarCoordinator: TabBarCoordinator?
+    private var profileCoordinator: ProfileCoordinator?
 
     // MARK: - Initializer
     init(navigationController: UINavigationController, window: UIWindow) {
@@ -23,65 +26,59 @@ class AppCoordinator: Coordinator {
     func start() {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-        pushSplash()
+        showAuthentication()
     }
 
-    // MARK: - Private
-    private func pushSplash() {
-        let repository = SplashRepositoryImpl()
-        let viewModel = SplashViewModel(repository: repository)
-        let viewController = SplashViewController(viewModel: viewModel, delegate: self)
-        navigationController.pushViewController(viewController, animated: true)
-    }
-    
-    private func showLogin() {
-        let repository = LoginRepositoryImpl()
-        let viewModel = LoginViewModel(repository: repository)
-        let viewController = LoginViewController(viewModel: viewModel, delegate: self)
-        navigationController.pushViewController(viewController, animated: true)
-    }
-    
-    private func showRegister() {
-       let repository = RegisterRepositoryImpl()
-       let viewModel = RegisterViewModel(repository: repository)
-       let viewController = RegisterViewController(viewModel: viewModel, delegate: self)
-       navigationController.pushViewController(viewController, animated: true)
-    }
-    
     private func showTabBar() {
-        //TODO: implement
+        tabBarCoordinator = TabBarCoordinator(navigationController: navigationController, delegate: self)
+        tabBarCoordinator?.start()
+        authenticationCoordinator = nil
+    }
+
+    private func showAuthentication() {
+        authenticationCoordinator = AuthenticationCoordinator(navigationController: navigationController, delegate: self)
+        authenticationCoordinator?.start()
+        tabBarCoordinator = nil
+    }
+    
+    private func showShoppingBag() {
+           let repository = ShoppingBagRepositoryImpl()
+           let viewModel = ShoppingBagViewModel(repository: repository)
+           let viewController = ShoppingBagViewController(viewModel: viewModel, delegate: self)
+       }
+
+}
+
+// MARK: AuthenticationCoordinatorDelegate
+extension AppCoordinator: AuthenticationCoordinatorDelegate {
+
+    func authenticationCoordinatorDidLogin() {
+        showTabBar()
     }
 
 }
 
-// MARK: - LoginViewControllerDelegate
-extension AppCoordinator: LoginViewControllerDelegate {
+// MARK: TabBarCoordinatorDelegate
+extension AppCoordinator: TabBarCoordinatorDelegate {
 
-    func loginViewControllerDidLogin() {
-        showLogin()
+    func profileCoordinatorDidLogout() {
+        showAuthentication()
+        print("AppCoordinator shows Authentication")
     }
 
 }
 
-// MARK: - SplashViewControllerDelegate
-extension AppCoordinator: SplashViewControllerDelegate {
+// MARK: - ShoppingBagCoordinatorDelegate
+extension AppCoordinator: ProductsCoordinatorDelegate {
     
-    func splashViewControlledDidPressSignIn() {
-        showLogin()
+    func productsCoordinatorShoppingBagWasPressed() {
+        print("Shopping bag")
     }
     
-    func splashViewControllerDidPressRegister() {
-        showRegister()
-    }
     
 }
 
-// MARK: - RegisterViewControllerDelegate
-
-extension AppCoordinator: RegisterViewControllerDelegate {
-    
-    func registerViewControllerDidPressSignIn() {
-        showLogin()
-    }
+extension AppCoordinator: ShoppingBagViewControllerDelagate {
     
 }
+

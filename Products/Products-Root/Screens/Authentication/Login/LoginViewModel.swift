@@ -18,8 +18,10 @@ class LoginViewModel: BaseViewModel, EventTransmitter {
     var error = Observable<GeneralError?>(nil)
     var event = Observable<Event?>(nil)
     var isRequestInProgress = Observable<Bool>(false)
-    var email = Observable<String?>(nil)
-    var password = Observable<String?>(nil)
+//    var email = Observable<String?>(nil)
+     var email = Observable<String?>("santamarian.bogdan+1@gmail.com")
+//    var password = Observable<String?>(nil)
+    var password = Observable<String?>("Test1234!")
 
     private var repository: LoginRepository
 
