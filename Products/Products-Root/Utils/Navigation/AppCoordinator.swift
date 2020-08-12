@@ -40,6 +40,12 @@ class AppCoordinator: Coordinator {
         authenticationCoordinator?.start()
         tabBarCoordinator = nil
     }
+    
+    private func showShoppingBag() {
+           let repository = ShoppingBagRepositoryImpl()
+           let viewModel = ShoppingBagViewModel(repository: repository)
+           let viewController = ShoppingBagViewController(viewModel: viewModel, delegate: self)
+       }
 
 }
 
@@ -61,3 +67,18 @@ extension AppCoordinator: TabBarCoordinatorDelegate {
     }
 
 }
+
+// MARK: - ShoppingBagCoordinatorDelegate
+extension AppCoordinator: ProductsCoordinatorDelegate {
+    
+    func productsCoordinatorShoppingBagWasPressed() {
+        print("Shopping bag")
+    }
+    
+    
+}
+
+extension AppCoordinator: ShoppingBagViewControllerDelagate {
+    
+}
+

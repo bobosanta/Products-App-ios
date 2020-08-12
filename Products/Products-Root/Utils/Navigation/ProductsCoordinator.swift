@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProductsCoordinatorDelegate: class {
-
+    func productsCoordinatorShoppingBagWasPressed()
 }
 
 class ProductsCoordinator: Coordinator {
@@ -21,9 +21,10 @@ class ProductsCoordinator: Coordinator {
     init(delegate: ProductsCoordinatorDelegate) {
         self.delegate = delegate
 
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
-        viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Shopping Bag", style: .plain, target: self, action: #selector(shoppingBagButtonPressed))
+        let repository = ProductsRepositoryImpl()
+        let viewModel = ProductsViewModel(repository: repository)
+        let viewController = ProductsViewController(viewModel: viewModel, delegate: self)
+        
         navigationController = UINavigationController(rootViewController: viewController)
 
         let tabBarItem = UITabBarItem(title: "products".localized, image: nil, selectedImage: nil)
@@ -31,11 +32,12 @@ class ProductsCoordinator: Coordinator {
 
     }
 
-    @objc
-    private func shoppingBagButtonPressed() {
-        // TODO: - Implement show shopping bag functionality (ditch tabbar nav show shopping bag)
-        print("ProfileCoordinator notifies TabBarCoordinator")
+}
 
+extension ProductsCoordinator: ProductsViewControllerDelegate {
+   
+    func shoppingBagPressed() {
+        delegate?.productsCoordinatorShoppingBagWasPressed()
     }
-
+    
 }

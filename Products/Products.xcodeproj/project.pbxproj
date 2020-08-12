@@ -13,6 +13,14 @@
 		1D0C9A2724E3206600190069 /* ProductsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A2624E3206600190069 /* ProductsCoordinator.swift */; };
 		1D0C9A2924E3207400190069 /* WishlistCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A2824E3207300190069 /* WishlistCoordinator.swift */; };
 		1D0C9A2B24E3207E00190069 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A2A24E3207E00190069 /* ProfileCoordinator.swift */; };
+		1D0C9A3124E4542500190069 /* ShoppingBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A3024E4542500190069 /* ShoppingBagViewController.swift */; };
+		1D0C9A3324E4545E00190069 /* ShoppingBagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A3224E4545E00190069 /* ShoppingBagViewModel.swift */; };
+		1D0C9A3524E4546C00190069 /* ShoppingBagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A3424E4546C00190069 /* ShoppingBagRepository.swift */; };
+		1D0C9A3724E4608800190069 /* ShoppingBagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D0C9A3624E4608700190069 /* ShoppingBagViewController.xib */; };
+		1D0C9A3A24E4676D00190069 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D0C9A3924E4676D00190069 /* ProductsViewController.xib */; };
+		1D0C9A3C24E4677D00190069 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A3B24E4677D00190069 /* ProductsViewController.swift */; };
+		1D0C9A3E24E4678B00190069 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A3D24E4678B00190069 /* ProductsViewModel.swift */; };
+		1D0C9A4024E4679900190069 /* ProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C9A3F24E4679900190069 /* ProductsRepository.swift */; };
 		1D5B8690241BF7AC00DC02BE /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5B868F241BF7AC00DC02BE /* RegisterViewController.xib */; };
 		1D5B8692241BF7C500DC02BE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B8691241BF7C500DC02BE /* RegisterViewController.swift */; };
 		1D5B8694241BF7D600DC02BE /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B8693241BF7D600DC02BE /* RegisterViewModel.swift */; };
@@ -57,6 +65,14 @@
 		1D0C9A2624E3206600190069 /* ProductsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCoordinator.swift; sourceTree = "<group>"; };
 		1D0C9A2824E3207300190069 /* WishlistCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistCoordinator.swift; sourceTree = "<group>"; };
 		1D0C9A2A24E3207E00190069 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		1D0C9A3024E4542500190069 /* ShoppingBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagViewController.swift; sourceTree = "<group>"; };
+		1D0C9A3224E4545E00190069 /* ShoppingBagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagViewModel.swift; sourceTree = "<group>"; };
+		1D0C9A3424E4546C00190069 /* ShoppingBagRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagRepository.swift; sourceTree = "<group>"; };
+		1D0C9A3624E4608700190069 /* ShoppingBagViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingBagViewController.xib; sourceTree = "<group>"; };
+		1D0C9A3924E4676D00190069 /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
+		1D0C9A3B24E4677D00190069 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		1D0C9A3D24E4678B00190069 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		1D0C9A3F24E4679900190069 /* ProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRepository.swift; sourceTree = "<group>"; };
 		1D5B868F241BF7AC00DC02BE /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		1D5B8691241BF7C500DC02BE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1D5B8693241BF7D600DC02BE /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -111,9 +127,33 @@
 		1D0C9A1F24E3106900190069 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				1D0C9A3824E4675500190069 /* Products */,
+				1D0C9A2F24E453F500190069 /* Shopping Bag */,
 				1D0C9A2024E3108D00190069 /* TabBarViewController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1D0C9A2F24E453F500190069 /* Shopping Bag */ = {
+			isa = PBXGroup;
+			children = (
+				1D0C9A3624E4608700190069 /* ShoppingBagViewController.xib */,
+				1D0C9A3024E4542500190069 /* ShoppingBagViewController.swift */,
+				1D0C9A3224E4545E00190069 /* ShoppingBagViewModel.swift */,
+				1D0C9A3424E4546C00190069 /* ShoppingBagRepository.swift */,
+			);
+			path = "Shopping Bag";
+			sourceTree = "<group>";
+		};
+		1D0C9A3824E4675500190069 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D0C9A3924E4676D00190069 /* ProductsViewController.xib */,
+				1D0C9A3B24E4677D00190069 /* ProductsViewController.swift */,
+				1D0C9A3D24E4678B00190069 /* ProductsViewModel.swift */,
+				1D0C9A3F24E4679900190069 /* ProductsRepository.swift */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 		1D5B868E241BF53E00DC02BE /* Register */ = {
@@ -202,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				ABC4D204240C0F8000BF0E90 /* Authentication */,
+				1D0C9A1F24E3106900190069 /* TabBar */,
 				ABC4D1FE240C0D6200BF0E90 /* Misc */,
 			);
 			path = Screens;
@@ -252,7 +293,6 @@
 		ABC4D204240C0F8000BF0E90 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				1D0C9A1F24E3106900190069 /* TabBar */,
 				1DCD6CAE2417F554002935E2 /* Splash */,
 				1D5B868E241BF53E00DC02BE /* Register */,
 				ABC4D205240C0F8900BF0E90 /* Login */,
@@ -382,7 +422,9 @@
 				1DCD6CB02417F5AA002935E2 /* SplashViewController.xib in Resources */,
 				ABC4D217240C145000BF0E90 /* Localizable.strings in Resources */,
 				1DBEAB03240C078100D3FD34 /* Assets.xcassets in Resources */,
+				1D0C9A3724E4608800190069 /* ShoppingBagViewController.xib in Resources */,
 				ABC4D207240C0F9600BF0E90 /* LoginViewController.xib in Resources */,
+				1D0C9A3A24E4676D00190069 /* ProductsViewController.xib in Resources */,
 				1D5B8690241BF7AC00DC02BE /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,8 +496,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0C9A3324E4545E00190069 /* ShoppingBagViewModel.swift in Sources */,
 				1DCD6CB8241BEB14002935E2 /* SplashRepository.swift in Sources */,
 				ABC4D209240C0FA000BF0E90 /* LoginViewController.swift in Sources */,
+				1D0C9A3C24E4677D00190069 /* ProductsViewController.swift in Sources */,
 				ABC4D227240C19EE00BF0E90 /* APIRouter.swift in Sources */,
 				ABF2CBDD241638E700267960 /* LoginRequest.swift in Sources */,
 				1D0C9A2124E3108D00190069 /* TabBarViewController.swift in Sources */,
@@ -464,17 +508,20 @@
 				ABC4D21D240C14DB00BF0E90 /* StringExtensions.swift in Sources */,
 				1D0C9A2524E316EC00190069 /* TabBarCoordinator.swift in Sources */,
 				ABC4D201240C0E7B00BF0E90 /* Coordinator.swift in Sources */,
+				1D0C9A3E24E4678B00190069 /* ProductsViewModel.swift in Sources */,
 				ABC4D225240C19E800BF0E90 /* APIConfirguration.swift in Sources */,
 				ABC4D20B240C0FA700BF0E90 /* LoginViewModel.swift in Sources */,
 				1DBEAAFA240C077900D3FD34 /* AppDelegate.swift in Sources */,
 				ABF2CBDF2416397500267960 /* EncodableExtensions.swift in Sources */,
 				ABC4D212240C125A00BF0E90 /* BaseViewModel.swift in Sources */,
+				1D0C9A3524E4546C00190069 /* ShoppingBagRepository.swift in Sources */,
 				1D0C9A2924E3207400190069 /* WishlistCoordinator.swift in Sources */,
 				1D0C9A2724E3206600190069 /* ProductsCoordinator.swift in Sources */,
 				1D0C9A2324E3112900190069 /* AuthenticationCoordinator.swift in Sources */,
 				ABC4D223240C19DC00BF0E90 /* APIResponse.swift in Sources */,
 				ABC4D210240C125300BF0E90 /* BaseViewController.swift in Sources */,
 				1D5B8696241BF7E400DC02BE /* RegisterRepository.swift in Sources */,
+				1D0C9A3124E4542500190069 /* ShoppingBagViewController.swift in Sources */,
 				ABC4D22D240C251600BF0E90 /* AlertPresenter.swift in Sources */,
 				1D0C9A2B24E3207E00190069 /* ProfileCoordinator.swift in Sources */,
 				1D5B8692241BF7C500DC02BE /* RegisterViewController.swift in Sources */,
@@ -482,6 +529,7 @@
 				ABC4D21F240C16DA00BF0E90 /* UILabelExtension.swift in Sources */,
 				ABC4D229240C1BC200BF0E90 /* APIError.swift in Sources */,
 				ABC4D215240C13E700BF0E90 /* GeneralError.swift in Sources */,
+				1D0C9A4024E4679900190069 /* ProductsRepository.swift in Sources */,
 				1D5B8694241BF7D600DC02BE /* RegisterViewModel.swift in Sources */,
 				ABC4D22F240C26B600BF0E90 /* LoadingViewPresenter.swift in Sources */,
 				ABF2CBE124163A9100267960 /* Member.swift in Sources */,

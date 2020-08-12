@@ -25,6 +25,7 @@ class AuthenticationCoordinator: Coordinator {
 
     // MARK: - Navigation
     func start() {
+        navigationController.setNavigationBarHidden(true, animated: false)
         pushSplash()
     }
 

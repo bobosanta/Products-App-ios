@@ -24,6 +24,7 @@ class TabBarCoordinator: Coordinator {
     // MARK: - Initializer
     init(navigationController: UINavigationController, delegate: TabBarCoordinatorDelegate) {
         self.navigationController = navigationController
+//        self.navigationController = UINavigationController()
         self.delegate = delegate
     }
 
@@ -41,11 +42,20 @@ class TabBarCoordinator: Coordinator {
         navigationController.setViewControllers([tabBarViewController], animated: false)
     }
 
+    private func pushShoppingBag() {
+        let repository = ShoppingBagRepositoryImpl()
+        let viewModel = ShoppingBagViewModel(repository: repository)
+        let viewController = ShoppingBagViewController(viewModel: viewModel, delegate: self)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
 }
 
 // MARK: ProductCoordinatorDelegate
 extension TabBarCoordinator: ProductsCoordinatorDelegate {
-
+    func productsCoordinatorShoppingBagWasPressed() {
+        pushShoppingBag()
+    }
 }
 
 // MARK: WishListCoordinatorDelegate
@@ -61,4 +71,9 @@ extension TabBarCoordinator: ProfileCoordinatorDelegate {
         delegate?.profileCoordinatorDidLogout()
     }
 
+}
+
+// MARK: ShoppingBagViewControllerDelagate
+extension TabBarCoordinator: ShoppingBagViewControllerDelagate {
+    
 }

@@ -19,6 +19,12 @@ class TabBarViewController: UITabBarController {
     convenience init(delegate: TabBarViewControllerDelegate) {
         self.init()
         tabBarViewControllerDelegate = delegate
+    
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
 }
