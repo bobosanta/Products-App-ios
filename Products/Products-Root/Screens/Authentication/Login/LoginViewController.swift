@@ -21,9 +21,9 @@ class LoginViewController: BaseViewController, AlertPresenter, LoadingViewPresen
     @IBOutlet weak var showPasswordButton: UIButton!
     
     // MARK: - Properties
+    var isPasswordHidden = true
     private var viewModel: LoginViewModel!
     private weak var delegate: LoginViewControllerDelegate?
-    var isPasswordHidden = true
 
     // MARK: - Lifecycle
     convenience init(viewModel: LoginViewModel, delegate: LoginViewControllerDelegate) {
